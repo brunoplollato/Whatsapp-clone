@@ -6,12 +6,7 @@ import { useRouter } from 'next/router';
 import { getRecipientEmail } from '../../utils/getRecipientEmail';
 import { Container, UserAvatar } from './styles';
 
-type Chat = {
-  id: string,
-  users: string[],
-}
-
-function Chat({ id, users }: Chat) {
+function Chat({ id, users }) {
   const router = useRouter();
 
   const [ user ] = useAuthState(auth)

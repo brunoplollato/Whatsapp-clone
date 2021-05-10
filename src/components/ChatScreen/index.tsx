@@ -31,7 +31,7 @@ function ChatScreen({ chat, messages }) {
   const endOfMessageRef = useRef(null)
   const [ messagesSnapshot ] = useCollection(
     db.collection('chats')
-      .doc(router.query.id)
+      .doc(router.query.id as string)
       .collection('messages')
       .orderBy('timestamp', 'asc')
       )
