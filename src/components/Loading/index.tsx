@@ -1,8 +1,10 @@
 import { Circle } from 'better-react-spinkit';
 
+import { Center } from './styles';
+
 export default function Loading() {
   return (
-    <center style={{ display: 'grid', placeItems: 'center', height: '100vh' }}>
+    <Center style={{ display: 'grid', placeItems: 'center', height: '100vh' }}>
         <div>
           <img
             src='https://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png'
@@ -12,7 +14,6 @@ export default function Loading() {
 
           <Circle color="#3CBC28" size={60} />
         </div>
-    </center>
+    </Center>
   )
 }
-

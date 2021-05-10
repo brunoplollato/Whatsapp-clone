@@ -34,11 +34,10 @@ export async function getServerSideProps(context) {
     .get()
 
   const messages = messageRes.docs.map(doc => ({
-    id: doc.id,
-    ...doc.data()
+    ...doc.data(),
   })).map(messages => ({
     ...messages,
-    timestamp: messages.timestamp.toDate().getTime()
+    timestamp: messages.timestamp.toDate().getTime(),
   }))
 
   // PREP the chats

@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import { Container, LoginContainer, Logo } from "./styles";
 import { auth, provider } from "../../../firebase";
 
-function Login() {
+export default function Login() {
 
   const signIn = () => {
     auth.signInWithPopup(provider).catch(alert)
@@ -23,5 +23,3 @@ function Login() {
     </Container>
   );
 }
-
-export default Login;
