@@ -76,7 +76,7 @@ function ChatScreen({ chat, messages }) {
       { merge: true }
     )
 
-    db.collection('chats').doc(router.query.id).collection('messages').add({
+    db.collection('chats').doc(router.query.id as string).collection('messages').add({
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       message: input,
       user: user.email,
