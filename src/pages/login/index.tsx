@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { Button } from "@material-ui/core";
+import { auth, provider } from "../../../firebase";
 
 import { Container, LoginContainer, Logo } from "./styles";
-import { auth, provider } from "../../../firebase";
 
 export default function Login() {
 
